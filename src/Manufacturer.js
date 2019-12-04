@@ -2,8 +2,8 @@ import React from "react";
 import Company from "./Company"
 import { Table, } from "semantic-ui-react";
 
-const Manufacturer = ({manufacturer, removeManufacturer })=>(
-
+const Manufacturer = ({manufacturer, removeCompany, })=>(
+//render data here..
   <Table celled padded>
     <Table.Header>
       <Table.Row>
@@ -11,20 +11,20 @@ const Manufacturer = ({manufacturer, removeManufacturer })=>(
         <Table.HeaderCell>Phone</Table.HeaderCell>
         <Table.HeaderCell>Options</Table.HeaderCell>
       </Table.Row>
-    </Table.Header>
+  </Table.Header>
     
-   <Table.Body>
+    <Table.Body>
     {
       manufacturer.map(company =>(
-       <Company key={company.id} {...company} removeManufacturer={removeManufacturer}/>
-       
+       <Company key={company.id} {...company} remove={removeCompany}/>
+     
        ))
     }
-    </Table.Body>
-  </Table> 
+      </Table.Body>
+    </Table> 
 );
 
 export default Manufacturer;
-//Contacts = Manufacturer
-//contacts = manufacturer
-//contact = company
+
+
+

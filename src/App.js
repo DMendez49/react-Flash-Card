@@ -6,10 +6,10 @@ import CompanyForm from "./CompanyForm.js";
 class App extends React.Component{
   state = {manufacturer: [
         {id :1, compName:"Ford", phone:"801-121-5656",},
-        {id :1, compName:"Tesla", phone:"801-299-5356",},
-        {id :1, compName:"Audi", phone:"801-326-5675",},
-        {id :1, compName:"Toyota", phone:"801-895-3261",},
-        {id :1, compName:"BMW", phone:"801-696-5000",},
+        {id :2, compName:"Tesla", phone:"801-299-5356",},
+        {id :3, compName:"Audi", phone:"801-326-5675",},
+        {id :4, compName:"Toyota", phone:"801-895-3261",},
+        {id :5, compName:"BMW", phone:"801-696-5000",},
     ], showForm: true,
   };
 
@@ -25,7 +25,7 @@ class App extends React.Component{
 
   removeCompany = (id) => {
     const manufacturer = this.state.manufacturer.filter(company => {
-      if (company.id != id)
+      if (company.id !== id)
       return company;
     });
     this.setState({ manufacturer, });
