@@ -2,22 +2,31 @@ import React from "react";
 import { Form, } from "semantic-ui-react";
 
 class CompanyForm extends React.Component{
-  state = {name:"", phone: "",};
+  state = {compName:"", phone: "", };
+
+  componentDidMount(){
+    if (this.props.id)
+    this.setState({ compName: this.props.compName, phone: this.props.phone, });
+  };
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.add(this.state);
-    this.setState({ compName:"", phone:"", });
-  }
+    if (this.props.id)
+      this.props.edit({ id: this.props.id, compName: this.state.compName, phone: this.state.phone, });
+    else
+      this.props.addCompany( this.state );
+      this.setState({compName: "", phone:"", });
+    // this.props.addCompany(this.state);
+    // this.setState({ compName:"", phone:"", });
+  };
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value, });
   };
 
   render(){
-    // const {compName, phone,} = this.this
     return(
-      <Form onSubmit={this.handleSubmit}>
+      <Form onSubmit = {this.handleSubmit}>
         <Form.Input
         fluid
         label="Manufacturer"
@@ -34,7 +43,8 @@ class CompanyForm extends React.Component{
         value={this.state.phone}
         onChange={this.handleChange}
         />
-        <Form.Button>Submit</Form.Button>
+        <Form.Button color = "blue inverted" >Submit</Form.Button>
+        <br />
       </Form>
     );
   };

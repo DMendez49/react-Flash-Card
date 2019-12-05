@@ -1,27 +1,15 @@
 import React from "react";
 import Company from "./Company"
-import { Table, } from "semantic-ui-react";
+import { Card, } from "semantic-ui-react";
 
-const Manufacturer = ({manufacturer, removeCompany, })=>(
-//render data here..
-  <Table celled padded>
-    <Table.Header>
-      <Table.Row>
-        <Table.HeaderCell>Name of Manufacturer</Table.HeaderCell>
-        <Table.HeaderCell>Phone</Table.HeaderCell>
-        <Table.HeaderCell>Options</Table.HeaderCell>
-      </Table.Row>
-  </Table.Header>
-    
-    <Table.Body>
-    {
+const Manufacturer = ({manufacturer, removeCompany, editCompany }) => (
+ 
+   <Card.Group itemsPerRow={5}> {  
       manufacturer.map(company =>(
-       <Company key={company.id} {...company} remove={removeCompany}/>
-     
+       <Company key={company.id} {...company} remove={removeCompany} edit={editCompany}/>
        ))
     }
-      </Table.Body>
-    </Table> 
+      </Card.Group>
 );
 
 export default Manufacturer;
