@@ -43,7 +43,7 @@ class CompanyForm extends React.Component{
         value={this.state.phone}
         onChange={this.handleChange}
         />
-        <Form.Button color = "blue inverted" >Submit</Form.Button>
+        <Form.Button color = "blue" >Submit</Form.Button>
         <br />
       </Form>
     );

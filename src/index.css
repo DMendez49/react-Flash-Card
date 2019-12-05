@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -11,3 +12,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.lamb{
+  background: url(https://i.pinimg.com/originals/19/26/db/1926db7fe08ccdf816a39231e2853a08.jpg);
+}
+
+h1{
+  color: rgb(134, 12, 12);
+  
+}
+
+.Card{
+  width: 1500px;
+  
+}
+
