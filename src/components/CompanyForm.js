@@ -11,13 +11,13 @@ class CompanyForm extends React.Component{
 
   handleSubmit = (e) => {
     e.preventDefault();
-    if (this.props.id)
+    if (this.props.id){
       this.props.edit({ id: this.props.id, compName: this.state.compName, phone: this.state.phone, });
-    else
+      this.props.toggler()
+    } else {
       this.props.addCompany( this.state );
+    }
       this.setState({compName: "", phone:"", });
-    // this.props.addCompany(this.state);
-    // this.setState({ compName:"", phone:"", });
   };
 
   handleChange = (e) => {

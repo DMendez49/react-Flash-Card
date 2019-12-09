@@ -1,11 +1,11 @@
 import React from "react";
-import CompanyForm from "./CompanyForm";
-import { Button, Card, } from "semantic-ui-react";
+import CompanyForm from "./components/CompanyForm";
+import { Button, Card, Icon } from "semantic-ui-react";
 
 class Company extends React.Component {
   state = {editing: false, };
 
-  Toggler = () => this.setState({ editing: !this.state.editing, });
+  toggler = () => this.setState({ editing: !this.state.editing, });
 
   render() {
     const {id, compName, phone, remove, edit} = this.props;
@@ -13,7 +13,7 @@ class Company extends React.Component {
       <Card color="grey">
         {
           this.state.editing ?
-          <CompanyForm id={id} compName={compName} phone={phone} remove={remove} edit={this.props.edit}/>
+          <CompanyForm id={id} compName={compName} phone={phone} remove={remove} edit={edit} toggler={this.toggler}/>
           :
           <> 
             <Card.Header color="grey">
@@ -25,10 +25,11 @@ class Company extends React.Component {
         }
         <Card.Content extra color="grey">
         <Button color="red inverted" onClick={() => remove(id)}>
+        
           Delete
           </Button>
 
-          <Button color="green inverted" onClick={this.Toggler}>
+          <Button color="green inverted" onClick={this.toggler}>
             Edit
           </Button>
         </Card.Content>
