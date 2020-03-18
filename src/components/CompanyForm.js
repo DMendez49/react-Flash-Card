@@ -43,11 +43,20 @@ class CompanyForm extends React.Component{
         value={this.state.phone}
         onChange={this.handleChange}
         />
-        <Form.Button color = "blue" >Submit</Form.Button>
+        <Form.Button 
+          style={border}
+          color="blue" 
+          > Submit 
+        </Form.Button>
         <br />
       </Form>
     );
   };
 };
+
+const border ={
+  borderStyle: 'solid',
+  borderWidth: '1px',
+}
 
 export default CompanyForm;

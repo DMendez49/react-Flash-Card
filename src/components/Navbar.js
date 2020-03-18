@@ -3,7 +3,8 @@ import { Menu, } from "semantic-ui-react";
 import { Link } from "react-router-dom"; 
 
 const Navbar = () => (
-  <Menu>
+
+  <Menu style={border}>
   <Link to="/">
     <Menu.Item>
       Home
@@ -21,5 +22,10 @@ const Navbar = () => (
   </Link>
 </Menu>
 );
+
+const border = {
+  borderStyle: 'solid',
+  borderWidth: '1px',
+}
 
 export default Navbar;

@@ -25,8 +25,10 @@ class EditCompanyForm extends React.Component{
         value={this.state.compName}
         onChange={this.handleSubmit}
         />
+
          <Form.Input
         fluid
+        style={blackBorder}
         label="phone"
         placeholder="Phone"
         name="phone"
@@ -39,6 +41,11 @@ class EditCompanyForm extends React.Component{
     );
   };
 };
+
+const blackBorder = {
+  borderStyle: 'solid',
+  borderWidth: '1px',
+}
 
 export default EditCompanyForm;
 

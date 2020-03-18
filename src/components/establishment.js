@@ -19,7 +19,6 @@ class App extends React.Component{
   getId = () =>  Math.floor((1 + Math.random()) * 10000);
 
       // NOTE We are just using this as a helper function for id's since we aren't using a db yet
-
   addCompany = ({compName, phone,}) => {
     let company = {id: this.getId(), compName, phone, }
     this.setState({ manufacturer: [...this.state.manufacturer, company], });
@@ -49,9 +48,14 @@ class App extends React.Component{
       <Container style={{ paddingTop: "25px"}}>
         <Header as="h1">React Flash-Card</Header>
         <br/>
-          <Button icon color="blue" onClick={this.toggleForm}>
+          <Button
+           style={border}
+           icon color="blue" 
+           onClick={this.toggleForm}
+           >
             <Icon name={this.state.showForm? 'angle double up' :'angle double down'} />
           </Button>
+
         <br/> <br/> 
         {this.state.showForm ? <CompanyForm addCompany={this.addCompany}/>: null}
         <Manufacturer manufacturer={this.state.manufacturer} removeCompany={this.removeCompany} editCompany={this.editCompany}/>
@@ -60,6 +64,11 @@ class App extends React.Component{
     );
   };
 };
+
+const border ={
+  borderStyle: 'solid',
+  borderWidth:'1px',
+}
 
 export default App;
 //Contacts = Manufacturer

@@ -13,17 +13,45 @@ code {
     monospace;
 }
 
+body{
+  background: url(https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-pure-color-watercolor-graffiti-gradient-background-board-design-board-design-image_66713.jpg);
+  height: 150vh !important;
+}
+
 .lamb{
-  background: url(https://i.pinimg.com/originals/19/26/db/1926db7fe08ccdf816a39231e2853a08.jpg);
+  background: url(https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-pure-color-watercolor-graffiti-gradient-background-board-design-board-design-image_66713.jpg);
+  height: 100%;
+}
+.lamb2{
+  background: url(https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-pure-color-watercolor-graffiti-gradient-background-board-design-board-design-image_66713.jpg);
+  height: 100%;
 }
 
 h1{
   color: rgb(134, 12, 12);
-  
 }
 
 .Card{
   width: 1500px;
-  
+}
+
+.ui.card, .ui.cards>.card{
+  background-color: antiquewhite !important;
+}
+
+.ui.menu{
+  background-color: antiquewhite !important;
+  border-style: solid !important;
+  border-width: 1px !important; 
+}
+
+.ui.header{
+  color: darkred;
+}
+
+.ui.three.cards>.card{
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
 }
 
