@@ -1,3 +1,6 @@
+@import "index.css";
+
+
 .App {
   text-align: center;
 }
@@ -20,8 +23,12 @@
 .App-link {
   color: #09d3ac;
 }
-/* 
-.ui.menu{
-  border-style: solid !important;
-  border-width: 1px !important;
-} */
+
+
+@media screen and (max-width: 375px) {
+
+  .lamb{
+    width: 100% !important;
+    }
+
+}

@@ -43,6 +43,7 @@ class CompanyForm extends React.Component{
         value={this.state.phone}
         onChange={this.handleChange}
         />
+        <br />
         <Form.Button 
           style={border}
           color="blue" 

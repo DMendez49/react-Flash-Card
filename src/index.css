@@ -1,3 +1,4 @@
+@import "App.css";
 
 body {
   margin: 0;
@@ -14,15 +15,12 @@ code {
 }
 
 body{
-  background: url(https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-pure-color-watercolor-graffiti-gradient-background-board-design-board-design-image_66713.jpg);
+  background: url(https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-pure-color-watercolor-graffiti-gradient-background-board-design-board-design-image_66713.jpg) !important;
   height: 150vh !important;
+  width: 100% !important;
 }
 
 .lamb{
-  background: url(https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-pure-color-watercolor-graffiti-gradient-background-board-design-board-design-image_66713.jpg);
-  height: 100%;
-}
-.lamb2{
   background: url(https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-pure-color-watercolor-graffiti-gradient-background-board-design-board-design-image_66713.jpg);
   height: 100%;
 }
@@ -49,9 +47,40 @@ h1{
   color: darkred;
 }
 
+.ui.form .field>label{
+  font-size: 20px !important;
+  color: darkred !important;
+}
+Form.Input{
+  border-style: solid !important;
+}
+
 .ui.three.cards>.card{
   border-style: solid;
   border-width: 1px;
   border-color: black;
 }
 
+/* I phone size */
+@media screen and (max-width: 375px) {
+
+  .lamb {
+    width: 100% !important;
+    }
+  .ui.menu{
+    width: 100% !important;
+  }
+
+  .ui.three.cards{
+    width: 100% !important;
+  }
+
+  .ui.container{
+    width: 100% !important;
+    margin-left: 0em !important;
+  }
+  .ui.menu{
+    width: 100% !important;
+  }
+
+}

@@ -45,9 +45,10 @@ class App extends React.Component{
 
   render(){
     return(
-      <Container style={{ paddingTop: "25px"}}>
+      <Container style={{ paddingTop: "35px"}}>
         <Header as="h1">React Flash-Card</Header>
-        <br/>
+        <br/><br/>
+
           <Button
            style={border}
            icon color="blue" 
